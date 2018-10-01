@@ -25,14 +25,14 @@ Architecture of this bot closely follow the architecture described in the book. 
 	type of answer it expects
 
 > **Passage Retrieval** : It generates question vector and vectors of passage
-	using TF-IDF as feature, it computes cosine similarity between question 
+	using TF-IDF as feature, it computes cosine similarity between question
 	vector and passage vector returning top 3 closely resembling passage. Furthur
-	improvement to this step has been done by removing Stop Words and using 
+	improvement to this step has been done by removing Stop Words and using
 	Porter Stemmer
 
 > **Sentence Retrieval** : After retrieving passage, it tokenize sentences and
-	computes ngram similarity between question and sentence. Thus identifying 
-	most relevant sentences. 
+	computes ngram similarity between question and sentence. Thus identifying
+	most relevant sentences.
 
 > **Answer Processing** : Based on the expected answer type, then it process
 	the answer sentence to identify particular entity using name-entity
@@ -50,7 +50,7 @@ Test script is included in this repository. Test script uses **Stanford Question
 $ python3 testQA.py
 ```
 
-Test script outputs the no of question and correct retrieval of the answer. And match this answer with what was tagged by human. It computes the accuracy of the QA answer prediction and stores final result in "accuracy.csv" 
+Test script outputs the no of question and correct retrieval of the answer. And match this answer with what was tagged by human. It computes the accuracy of the QA answer prediction and stores final result in "accuracy.csv"
 
 Accuracy of prediction is defined by:
 
@@ -107,6 +107,8 @@ Sample Questions:
 > What two real life persons were also part of the magazine feature alongside fictional Marvel characters?
 
 > Who took over as head of Marvel in 1978?
+
+> What team included Thor, the Hulk, Giant-man, the Wasp and Iron Man as the founding members?
 
 #### Mammal (dataset/Mammal.txt)
 Sample Questions:
@@ -240,6 +242,6 @@ Sample Questions
 1.	Jurafsky & Martin Speech And Language Processing 2Ed 2007
 2.	Steven Bird, Ewan Klein, and Edward Loper: Natural Language Processing with Python
 3.	The Stanford Question Answering Dataset: https://rajpurkar.github.io/SQuAD-explorer/
-4.	Amit Singhal, Steve Abney, Michiel Bacchiani, Michael Collins, Donald Hindle, Fernando Pereira AT&T at TREC-8 
+4.	Amit Singhal, Steve Abney, Michiel Bacchiani, Michael Collins, Donald Hindle, Fernando Pereira AT&T at TREC-8
 5.	FNU Budianto: Reading Comprehension on the SQuAD Dataset
 6.	Xin Li and Dan Roth: Learning Question Classifiers: The Role of Semantic Information.
